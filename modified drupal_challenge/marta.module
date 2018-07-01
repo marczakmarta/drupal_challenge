@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Module to disabled field 'employment type': freelance.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function marta_form_alter(&$form, &$form_state, $form_id) {
+  // dsm($form_id);
+  if ($form_id == 'job_node_form') {
+    if ($form['field_employment_type']['und']['#default_value'][0] == 'freelance') {
+      $form['field_employment_type']['#disabled'] = TRUE;
+    }
+  }
+}

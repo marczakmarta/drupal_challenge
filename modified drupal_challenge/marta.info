@@ -1,0 +1,4 @@
+name = "Marta"
+description = "Marta module"
+package = "Marta"
+core = 7.x
